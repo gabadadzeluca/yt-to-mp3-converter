@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Search from './components/search/Search';
 import DownloadLink from './components/download/DownloadLink';
-import {urlResultObject, urlResultInterface} from './components/download/util/urlResultObject';
+import {urlResultObject, urlResultInterface} from './utls/urlResultObject';
 
 function App() {
   const[urlResult, setUrlResult] = useState<urlResultInterface|null>(urlResultObject);

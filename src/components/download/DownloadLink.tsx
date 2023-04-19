@@ -1,4 +1,4 @@
-import {urlResultInterface} from './util/urlResultObject';
+import {urlResultInterface} from '../../utls/urlResultObject';
 import styles from './DownloadLink.module.css';
 
 export default function DownloadLink(props:{

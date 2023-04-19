@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import axios from 'axios';
 import styles from './Search.module.css';
 import images from '../images';
-import {urlResultInterface} from '../download/util/urlResultObject';
+import {urlResultInterface} from '../../utls/urlResultObject';
 
 export default function Search(props:{
   setUrlResult: (urlResult: urlResultInterface|null)=>void;
