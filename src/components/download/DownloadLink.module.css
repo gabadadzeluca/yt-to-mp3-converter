@@ -1,0 +1,28 @@
+.downloadDiv{
+  width: 60%;
+  color: #FFFFFF;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.downloadBtn{
+  font-family: inherit;
+  padding: 1.5rem 2rem 1.5rem 3rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: rgb(71, 28, 100);
+  background-image: url("../../assets/arrow.svg");
+  background-size: 2.5rem;
+  background-position: 0.4rem;
+}
+.downloadBtn>a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.title{
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+}

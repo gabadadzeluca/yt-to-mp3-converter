@@ -1,10 +1,21 @@
+import {urlResultInterface} from './util/urlResultObject';
+import styles from './DownloadLink.module.css';
+
 export default function DownloadLink(props:{
-  downloadLink: string|undefined;
+  urlResult: urlResultInterface|null;
 }){
-  const downloadLink = props.downloadLink;
+  
+  const urlResult = props.urlResult;
+  const link = urlResult?.link;
+  const title = urlResult?.title;
   return(
-    <div>
-      <a href={downloadLink}>Download mp3</a>
+    <div className={styles.downloadDiv}>
+      <h3 className={styles.title}>{title}</h3>
+      <button className={styles.downloadBtn}>
+        <a href={link} >
+            Download mp3
+        </a>
+      </button>
     </div>
   );
 }
