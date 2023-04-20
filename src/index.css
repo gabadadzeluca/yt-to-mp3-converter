@@ -13,6 +13,7 @@ html{
 body{
   font-family: 'Inter', sans-serif;
   color: #FFFFFF;
+  overflow-x: hidden;
 }
 
 :root{
