@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/yt-to-mp3-converter/static/css/main.fa9fb60a.css",
-    "main.js": "/yt-to-mp3-converter/static/js/main.47c5917a.js",
+    "main.css": "/yt-to-mp3-converter/static/css/main.20eab3d2.css",
+    "main.js": "/yt-to-mp3-converter/static/js/main.5e458d40.js",
     "static/media/mp3.svg": "/yt-to-mp3-converter/static/media/mp3.9c5bc0eeb5d3aee3b6130cd2d38b1913.svg",
     "static/media/ytlogo.svg": "/yt-to-mp3-converter/static/media/ytlogo.b1a3a6841fac357b41574e3d8e7a9a5f.svg",
     "static/media/music.svg": "/yt-to-mp3-converter/static/media/music.ce9ff55349c4e45922cd44d023c76c31.svg",
     "index.html": "/yt-to-mp3-converter/index.html",
     "static/media/searchIcon.svg": "/yt-to-mp3-converter/static/media/searchIcon.cc8f2fc7bfdb2c9fb7802f0cd3cae011.svg",
     "static/media/arrow.svg": "/yt-to-mp3-converter/static/media/arrow.b67297ca7e4f1f08e1c1515a30f9fecb.svg",
-    "main.fa9fb60a.css.map": "/yt-to-mp3-converter/static/css/main.fa9fb60a.css.map",
-    "main.47c5917a.js.map": "/yt-to-mp3-converter/static/js/main.47c5917a.js.map"
+    "main.20eab3d2.css.map": "/yt-to-mp3-converter/static/css/main.20eab3d2.css.map",
+    "main.5e458d40.js.map": "/yt-to-mp3-converter/static/js/main.5e458d40.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa9fb60a.css",
-    "static/js/main.47c5917a.js"
+    "static/css/main.20eab3d2.css",
+    "static/js/main.5e458d40.js"
   ]
 }
