@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import axios from 'axios';
 import styles from './Search.module.css';
-import images from '../images';
+import images from '../../utls/images';
 import {urlResultInterface} from '../../utls/urlResultObject';
 
 export default function Search(props:{
@@ -14,9 +14,10 @@ export default function Search(props:{
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
     const id = parseYoutubeId(inputUrlRef.current?.value ?? '');
-    if(inputUrlRef.current?.value) inputUrlRef.current.value = '';
-    setUrlResult(null);
+    if(inputUrlRef.current?.value) inputUrlRef.current.value = ''; //clear out the input field
+    setUrlResult(null); // reset url result
     if(id) makeRequest(id);
+    else setUrlError(true);
   }
   const makeRequest = async (id:string) => {
     const options = {
@@ -28,11 +29,10 @@ export default function Search(props:{
         'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
       }
     };
-   
+
     try{
       const response = await axios.request(options);
       setUrlResult(response.data);
-      // setDownloadLink(response.data.link);
     }catch(error){
       console.log(error);
     }
@@ -85,7 +85,6 @@ export default function Search(props:{
         :
         null
       }
-     
     </div>
   );
 }
