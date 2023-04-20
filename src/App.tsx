@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Search from './components/search/Search';
 import DownloadLink from './components/download/DownloadLink';
@@ -7,13 +7,11 @@ import {urlResultObject, urlResultInterface} from './utls/urlResultObject';
 
 function App() {
   const[urlResult, setUrlResult] = useState<urlResultInterface|null>(urlResultObject);
-  // const[downloadLink, setDownloadLink] = useState<string|undefined>('');
   
   return (
     <div className='App'>
       <div className='Container'>
         <Search 
-          // setDownloadLink={setDownloadLink}
           setUrlResult={setUrlResult}
         />
         {urlResult?.title ? 
