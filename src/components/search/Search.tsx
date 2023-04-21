@@ -13,6 +13,7 @@ export default function Search(props:{
 
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
+    if(inputUrlRef.current?.value == '') return;
     const id = parseYoutubeId(inputUrlRef.current?.value ?? '');
     if(inputUrlRef.current?.value) inputUrlRef.current.value = ''; //clear out the input field
     setUrlResult(null); // reset url result
