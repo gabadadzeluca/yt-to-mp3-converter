@@ -6,13 +6,15 @@ import {urlResultInterface} from '../../utls/urlResultObject';
 
 export default function Search(props:{
   setUrlResult: (urlResult: urlResultInterface|null)=>void;
+  setRequestLimitError: (boolean: boolean) => void;
 }) {
-  const setUrlResult = props.setUrlResult;
+  const {setUrlResult, setRequestLimitError} = props;
   const inputUrlRef = useRef<HTMLInputElement>(null)
   const[urlError, setUrlError] = useState<boolean>(false);
 
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
+    setRequestLimitError(false);
     if(inputUrlRef.current?.value == '') return;
     const id = parseYoutubeId(inputUrlRef.current?.value ?? '');
     if(inputUrlRef.current?.value) inputUrlRef.current.value = ''; //clear out the input field
@@ -30,12 +32,11 @@ export default function Search(props:{
         'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
       }
     };
-
     try{
       const response = await axios.request(options);
       setUrlResult(response.data);
-    }catch(error){
-      console.log(error);
+    }catch(error: any){
+      if(error.response.status === 429) setRequestLimitError(true);
     }
   }
   const parseYoutubeId = (url: string|URL): string | undefined | null => {
