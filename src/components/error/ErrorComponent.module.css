@@ -1,0 +1,12 @@
+.error{
+  color: rgb(134, 126, 126);
+  margin: 2rem;
+  font-size: 1rem;
+  max-width: 60%;
+  text-align: center;
+}
+@media screen and (min-width: 700px) {
+  .error{
+    font-size: 1.4rem;
+  }
+}
